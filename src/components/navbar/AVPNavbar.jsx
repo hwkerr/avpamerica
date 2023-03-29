@@ -5,22 +5,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const DEFAULT_USER = {
-    first: "Harrison",
-    last: "Kerr"
-};
-
-function AVPNavbar() {
-    const [user, setUser] = useState(DEFAULT_USER);
+function AVPNavbar({user, onLoginDefault, onLogout}) {
 
     const getLoginText = () => {
         return user ? (
             <React.Fragment>
-                Logged in as <a href="#user">{user.first}</a> | <a href="#logout" onClick={() => setUser(null)}>Not {user.first}? Log out!</a>
+                Logged in as <Link to="/user">{user.first}</Link> | <a href="#logout" onClick={onLogout}>Not {user.first}? Log out!</a>
             </React.Fragment>
         ) : (
             <React.Fragment>
-                <a href="#login" onClick={() => setUser(DEFAULT_USER)}>Log in!</a>
+                <a href="#login" onClick={onLoginDefault}>Log in!</a>
             </React.Fragment>
         )
     }

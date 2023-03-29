@@ -10,6 +10,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import Profile from './components/Profile/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,8 +18,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="one" element={<div>1</div>} />
-          <Route path="two" element={<div>2</div>} />
+          <Route path="user" element={<Profile />} />
           <Route path="*" element={<div>404</div>}/>
         </Route>
       </Routes>
