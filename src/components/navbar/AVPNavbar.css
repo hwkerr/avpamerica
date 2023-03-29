@@ -1,0 +1,11 @@
+/* Scale on Hover with Transition: https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
+
+.avp-logo svg {
+    fill: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.avp-logo:hover svg {
+    fill: #ffd400;
+    transform: scale(1.1);
+}
