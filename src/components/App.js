@@ -19,7 +19,7 @@ function App() {
       <Outlet context={user}/>
       <footer>
         <hr />
-        <p>This is my updated version of the avpamerica website</p>
+        <p>This is my updated version of the <a href="https://www.avpamerica.com/">avpamerica website</a></p>
       </footer>
     </div>
   );
