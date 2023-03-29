@@ -9,3 +9,7 @@
     fill: #ffd400;
     transform: scale(1.1);
 }
+
+nav.navbar .nav-link:hover {
+    color: #ffd400 !important;
+}
